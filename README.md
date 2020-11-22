@@ -2,6 +2,7 @@
 
 # Diseño de ER para crear una base de datos
 Diseñar un ER que represente el uso de una agenda, donde tendremos:
+```
 	- Usuarios de la aplicación con
 		- Email
 		- Contraseña
@@ -21,6 +22,7 @@ Diseñar un ER que represente el uso de una agenda, donde tendremos:
         - created_at
 		- updated_at
 		- deleted_at
+```
 
 # Creación de esquema de base de datos
 Convertir dicho ER en un esquema de base de datos teniendo en cuenta cosas como:
