@@ -63,6 +63,7 @@ Tienes que analizar cosas como que tipo de dato debería utilizar, porque y cual
 # Actualizaciones:
 - [ ] Actualizaremos la fecha de nacimiento a la fecha actual de todos los contactos del usuario 4 que en su apellido2 contengan una "a" y en su DNI contenga la "5" 
 
+# Programación
 El siguiente paso es desarrollar un programa en java que represente estos modelos de la entidad relación y que hagamos un programa donde nos conectemos a la base de datos y podamos:
 - [ ] Crear un nuevo usuario
 - [ ] Iniciar sesión con usuario
