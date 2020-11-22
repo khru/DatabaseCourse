@@ -16,6 +16,7 @@ Diseñar un ER que represente el uso de una agenda, donde tendremos:
 		- Nombre
 		- Apellido1
 		- Apellido2
+		- Sexo
 		- Fecha de nacimiento
         - created_at
 		- updated_at
@@ -55,6 +56,7 @@ Tienes que analizar cosas como que tipo de dato debería utilizar, porque y cual
 - [ ] A que usuario pertenece el contacto con menor edad
 - [ ] A que usuario pertenece el contacto con mayor edad
 - [ ] Lista de todos los contactos un atributo llamado "full_name" que sea el conjunto del nombre, apellido1 y apellido2
+- [ ] Listar todos los contactos que contengan una "e", que sean mayores de edad, que su DNI contanga un 1 ordenarlo y los agrupamos por fecha de nacimiento
 
 
 El siguiente paso es desarrollar un programa en java que represente estos modelos de la entidad relación y que hagamos un programa donde nos conectemos a la base de datos y podamos:
