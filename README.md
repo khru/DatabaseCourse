@@ -58,6 +58,8 @@ Tienes que analizar cosas como que tipo de dato debería utilizar, porque y cual
 - [ ] Lista de todos los contactos un atributo llamado "full_name" que sea el conjunto del nombre, apellido1 y apellido2
 - [ ] Listar todos los contactos que contengan una "e", que sean mayores de edad, que su DNI contanga un 1 ordenarlo y los agrupamos por fecha de nacimiento
 
+# Actualizaciones:
+- [ ] Actualizaremos la fecha de nacimiento a la fecha actual de todos los contactos del usuario 4 que en su apellido2 contengan una "a" y en su DNI contenga la "5" 
 
 El siguiente paso es desarrollar un programa en java que represente estos modelos de la entidad relación y que hagamos un programa donde nos conectemos a la base de datos y podamos:
 - [ ] Crear un nuevo usuario
