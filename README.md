@@ -1,3 +1,15 @@
+# Como levantar el entorno de desarrollos
+
+## Linux
+Ejecutamos en la terminal
+```
+sudo apt-get update -y && sudo apt-get install -y make
+```
+## Windows
+https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows
+
+# Instalar cliente de BD
+https://dbeaver.io/
 # Tarea de creación de una base de datos:
 
 # Diseño de ER para crear una base de datos

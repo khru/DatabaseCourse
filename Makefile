@@ -10,6 +10,11 @@ help:
 	@echo "  stop            ✋ Stop the MySQL container"
 	@echo "  start           🚀 Starts the MySQL container"
 	@echo "  delete          🗑 Deletes all the MySQL data"
+	@echo "  install         📥 Download docker"
+
+install:
+	@echo "✔️ Checking if you have the docker requiroments"
+	./scripts/docker-compose.sh
 
 start:
 	@echo "🚀 Starts the MySQL container"
