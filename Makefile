@@ -28,3 +28,10 @@ delete: stop
 	@echo "🗑 Deletes all the MySQL data"
 	sudo rm -rf data
 
+mysql-cli: 
+	@echo "Connection to MySQL Server inside the 🐳 docker container"
+	docker exec -it ${MYSQL_HOST} mysql -u ${MYSQL_USER} -p${MYSQL_PASSWD}
+
+shell:
+	@echo "Connection to a shell inside the 🐳 docker container"
+	docker exec -it ${MYSQL_HOST} /bin/bash
