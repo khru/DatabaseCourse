@@ -7,10 +7,13 @@ help:
 	@echo "usage: make COMMAND"
 	@echo ""
 	@echo "Commands:"
-	@echo "  stop            ✋ Stop the MySQL container"
-	@echo "  start           🚀 Starts the MySQL container"
-	@echo "  delete          🗑 Deletes all the MySQL data"
-	@echo "  install         📥 Download docker"
+	@echo "  stop                ✋ Stop the MySQL container"
+	@echo "  start               🚀 Starts the MySQL container"
+	@echo "  delete              🗑 Deletes all the MySQL data"
+	@echo "  install             📥 Download docker"
+	@echo "  mysql-cli           📡 Download docker"
+	@echo "  shell               📡 Shell on the docker container to interact"
+	@echo "  load-comercial-db   🔼 Load comercial DB on MySQL"
 
 install:
 	@echo "✔️ Checking if you have the docker requiroments"
@@ -29,9 +32,13 @@ delete: stop
 	sudo rm -rf data
 
 mysql-cli: 
-	@echo "Connection to MySQL Server inside the 🐳 docker container"
+	@echo "📡 Connection to MySQL Server inside the 🐳 docker container"
 	docker exec -it ${MYSQL_HOST} mysql -u ${MYSQL_USER} -p${MYSQL_PASSWD}
 
 shell:
-	@echo "Connection to a shell inside the 🐳 docker container"
+	@echo "📡 Connection to a shell inside the 🐳 docker container"
 	docker exec -it ${MYSQL_HOST} /bin/bash
+
+load-comercial-db:
+	@echo "📡 Connection to MySQL Server inside the 🐳 docker container"
+	docker exec -i ${MYSQL_HOST} mysql -u ${MYSQL_USER} -p${MYSQL_PASSWD} < ${SQL_DUMP}/db.sql
