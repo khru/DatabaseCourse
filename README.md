@@ -14,9 +14,9 @@ https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-wind
 sudo apt-get install git
 ```
 ### Windows
-(https://git-scm.com/download/win)[https://git-scm.com/download/win]
+[https://git-scm.com/download/win](https://git-scm.com/download/win)
 # Create una cuenta de github
-(https://github.com/join)[https://github.com/join]
+[https://github.com/join](https://github.com/join)
 # Create un Fork de este repositorio
 [https://aprendegit.com/fork-de-repositorios-para-que-sirve/#:~:text=La%20palabra%20fork%20se%20traduce,como%20un%20repositorio%20git%20cualquiera.](https://aprendegit.com/fork-de-repositorios-para-que-sirve/#:~:text=La%20palabra%20fork%20se%20traduce,como%20un%20repositorio%20git%20cualquiera.)
 
@@ -122,6 +122,7 @@ Ejecutaremos el comando
 ```shell
 make load-comercial-db
 ```
+```
 1 -  Hallar todos los datos de los clientes mayores de 20 años a fecha de hoy
 2 - Hallar todos los datos de los clientes mayores de 35 años que residan en un distrito de codigo postal 30001
 3 - Hallar el nº de clientes qye residan en cada uno de los distritos (que tengan mismo código postal) En la salida 
@@ -155,3 +156,14 @@ todos los clientes. Si existe indicar código de artículo y descripción.
 haya vendido en todos los distritos (tomando como referencia de distrito el código
 postal del cliente). (Sin TEMPORARY tabla 100% de la nota, con TEMPORARY
 tabla 45% de la nota)
+```
+
+# Ejercicios de funciones
+- Sobre el ejercicio de usuario deberas crear una función que te haga la busqueda por `email` o `DNI`del usuario
+- Sobre el ejercicio de usuario deberas crear una función que te haga la busqueda por `Nombre`,`Apellido1` o `Apellido2`
+
+
+# Ejercicios de trigger
+- Crea un nuevo campo en el usuario que calcurá el total de contactos que tiene y que serà actualizado siempre que se añada, actualice o elimine un contacto.
+- Crea 1 tabla de historico donde se almacene la información de los "usuarios a actualizar o borrar"
+- Crea 1 tabla de historico donde se almacene la información de los "contactos a actualizar o borrar"
