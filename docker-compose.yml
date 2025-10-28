@@ -1,9 +1,8 @@
-version: '3.3'
 services:
-  mysql_fuen:
+  mysql_learning:
     image: mysql:${MYSQL_VERSION}
     container_name: ${MYSQL_HOST}
-    command: --default-authentication-plugin=mysql_native_password
+    #command: --default-authentication-plugin=mysql_native_password
     restart: always
     env_file:
       - '.env'
@@ -18,3 +17,17 @@ services:
       - '${MYSQL_PORT}:${MYSQL_PORT}'
     volumes:
       - './data/db/mysql:/var/lib/mysql'
+    healthcheck:
+        test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p${MYSQL_PASSWD} --silent"]
+        interval: 3s
+        timeout: 2s
+        retries: 40
+        start_period: 20s
+
+  mysql_wait:
+    image: alpine:3.20
+    depends_on:
+      mysql_learning:
+        condition: service_healthy
+    command: ["sh", "-lc", "echo '✅ MySQL is healthy and accepting connections'"]
+    restart: "no"
