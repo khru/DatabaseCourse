@@ -1,169 +1,209 @@
-# Como levantar el entorno de desarrollos
+# How to set up the development environment
 
 ## Linux
-Ejecutamos en la terminal
+
+Run in the terminal
+
 ```
 sudo apt-get update -y && sudo apt-get install -y make
 ```
-## Windows
-https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows
 
-## Instalar git
+## Windows
+
+[https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows)
+
+## Install Git
+
 ### Linux
+
 ```
 sudo apt-get install git
 ```
+
 ### Windows
+
 [https://git-scm.com/download/win](https://git-scm.com/download/win)
-# Create una cuenta de github
+
+# Create a GitHub account
+
 [https://github.com/join](https://github.com/join)
-# Create un Fork de este repositorio
+
+# Create a fork of this repository
+
 [https://aprendegit.com/fork-de-repositorios-para-que-sirve/#:~:text=La%20palabra%20fork%20se%20traduce,como%20un%20repositorio%20git%20cualquiera.](https://aprendegit.com/fork-de-repositorios-para-que-sirve/#:~:text=La%20palabra%20fork%20se%20traduce,como%20un%20repositorio%20git%20cualquiera.)
 
-Un fork es una copia de este repositorio en un repositorio tuyo personal, ya que de lo contrario no podrás subir tus cambios.
+A fork is a copy of this repository into your own personal repository, otherwise you will not be able to push your changes.
 
-# Instalar cliente de BD
-https://dbeaver.io/
-https://www.mysql.com/products/workbench/
-# Tarea de creación de una base de datos:
-Primero crearemos una carpeta SQL y dentro de ella crearemos una carpeta llamada DML y otra DDL, coloca los scripts que vamos a hacer con la creación y modificación de la base de datos, en la carpeta de DDL
+# Install a DB client
 
-# Diseño de ER para crear una base de datos
-Diseñar un ER que represente el uso de una agenda, donde tendremos:
+[https://dbeaver.io/](https://dbeaver.io/)
+[https://www.mysql.com/products/workbench/](https://www.mysql.com/products/workbench/)
+
+# Task to create a database
+
+First, create a folder named `SQL`, and inside it create a folder called `DML` and another called `DDL`. Put the scripts we are going to write for creating and modifying the database in the `DDL` folder.
+
+# ER design to create a database
+
+Design an ER that represents the use of an address book, where we will have:
+
 ```
-	- Usuario
-		- Email
-		- Contraseña
-		- Fecha de nacimiento
-		- DNI
-		- created_at
-		- updated_at
-		- deleted_at
-	- Contacto:
-		- ninguno o más emails
-		- uno o muchos tlf
-		- Nombre
-		- Apellido1
-		- Apellido2
-		- Sexo
-		- Fecha de nacimiento
+    - User
+        - Email
+        - Password
+        - Date of birth
+        - DNI
         - created_at
-		- updated_at
-		- deleted_at
+        - updated_at
+        - deleted_at
+    - Contact:
+        - zero or more emails
+        - one or many phone numbers
+        - First name
+        - First surname
+        - Second surname
+        - Sex
+        - Date of birth
+        - created_at
+        - updated_at
+        - deleted_at
 ```
 
-# Creación de esquema de base de datos
-Convertir dicho ER en un esquema de base de datos teniendo en cuenta cosas como:
+# Creating the database schema
 
-Tienes que analizar cosas como que tipo de dato debería utilizar, porque y cual debería ser la longitud de cada uno de los atributos, cueles son únicos y/o tendrían valores por defecto.
+Convert that ER into a database schema taking into account things like:
 
-## Encontar las consultas que tenemos que hacer para identificar como se han creado las tablas
-esto también se llama la definición de las tablas
-# Inserción de base de datos
-- Tienes que crear 4 usuarios distintos
-- Tienes que insertar por lo menos 100 contactos por cada usuario
+You must analyze which data type should be used, why, and what the length of each attribute should be, which ones are unique and or should have default values.
 
-# Altera la tabla para que la tabla con
-Altera la tabla contacto para que el campo Sexo sea M o F Masculino o femenino
+## Find the queries we need to identify how the tables were created
 
-# Compartir contactos
-Ahora queremos que los usuarios puedan compartir contactos con otros usuarios, que deberíamos hacer, como podríamos hacerlos. Ahora quiero que lo hagais.
-# Consultas:
-- [ ] Lista todos los usuarios
-- [ ] Lista todos los contactos
-- [ ] Lista todos los usuarios con sus contactos
-- [ ] Lista todos los todos los usuarios que sean mayores de edad
-- [ ] Listar todos los usuarios que su nombre empiece por "a"
-- [ ] Listar todos los usuarios que su apellido empiece por "a"
-- [ ] Listar todos los usuarios que su nombre contenga la "a"
-- [ ] Listar todos los usuarios que su nombre empiece por "a" y ordenarlos por nombre
-- [ ] Listar todos los usuarios que su apellido empiece por "a" y ordenarlos por apellido
-- [ ] Listar todos los usuarios que su nombre contenga la "a" y ordenarlos por fecha de nacimiento
-- [ ] Listar todos los contactos que su nombre empiece por a para cada usuario
-- [ ] Decir cuantos contactos que su nombre empiece por a para cada usuario
-- [ ] Listar todos los usuarios que su apellido empiece por a
-- [ ] Listar todos los usuarios que su nombre contenga la a
-- [ ] Cuantos emails existen en la BD
-- [ ] Cuantos tlf existen en la BD
-- [ ] Cuantos contactos por cada uno de los usuarios son mayores de edad
-- [ ] Cual es el usuario con mayor edad de los que existen
-- [ ] Cual es el contacto con menor edad de los que existen
-- [ ] A que usuario pertenece el contacto con menor edad
-- [ ] A que usuario pertenece el contacto con mayor edad
-- [ ] Lista de todos los contactos un atributo llamado "full_name" que sea el conjunto del nombre, apellido1 y apellido2
-- [ ] Listar todos los contactos que contengan una "e", que sean mayores de edad, que su DNI contanga un 1 ordenarlo y los agrupamos por fecha de nacimiento
-- [ ] Hallar todos los datos de los contactos menores de 18 años a fecha de hoy
+This is also called the definition of the tables.
 
-# Actualizaciones:
-- [ ] Actualizaremos la fecha de nacimiento a la fecha actual de todos los contactos del usuario 4 que en su apellido2 contengan una "a" y en su DNI contenga la "5" 
+# Database insertion
 
+* You must create 4 different users.
+* You must insert at least 100 contacts for each user.
 
-# Borrado de constactos
-Vamos a insertar un usuario y varios contactos y vamos a intentar hacer lo siguiente.
-- [ ] Borrar el usuario (¿Qué ocurre?)
-- [ ] Borrar un contacto
-- [ ] Borrar todos los contactos
-- [ ] Borrar el usuario
+# Alter the table
 
-# Programación
-El siguiente paso es desarrollar un programa en java que represente estos modelos de la entidad relación y que hagamos un programa donde nos conectemos a la base de datos y podamos:
-- [ ] Crear un nuevo usuario
-- [ ] Iniciar sesión con usuario
-- [ ] Listar sus contactos
-- [ ] Crear contactos
-- [ ] Editar contactos
-- [ ] Borrar contactos
+Alter the `contact` table so that the `Sex` field is M or F, male or female.
 
-Para ello lo primero que tienes que hacer es ver el curso de http://www.formacarm.es/portal/servlet/formacarm.servlets.Portal?METHOD=DTEMARIO&id=210
+# Delete some contacts
+ - delete some contacts that you have created 10 for each user.
+ - virtual delete a random number contacts that you have created. This means that you will use the deleted_at field to indicate that they are deleted, but they will still be in the database.
 
-# Ejercicios de consultas un poquito más en detalle
-Para esto vamos a cargar una nueva base de datos que ya está preparada en la carpeta dump
-Ejecutaremos el comando
+# Sharing contacts
+
+Now we want users to be able to share contacts with other users. What should we do, how could we implement it. Now I want you to do it.
+
+# Queries:
+
+* [ ] List all users
+* [ ] List all contacts
+* [ ] List all contacts for a given user
+* [ ] List all users with their contacts 
+* [ ] List all users who are of legal age
+* [ ] List all users whose first name starts with "a"
+* [ ] List all users whose surname starts with "a"
+* [ ] List all users whose first name contains the letter "a"
+* [ ] List all users whose first name starts with "a" and sort them by first name
+* [ ] List all users whose first name ends with "a" and sort them by first name
+* [ ] List all users whose surname starts with "a" and sort them by surname
+* [ ] List all users whose first name contains the letter "a" and sort them by date of birth
+* [ ] For each user, list all contacts whose first name starts with "a"
+* [ ] Say how many contacts whose first name starts with "a" there are for each user
+* [ ] List all users whose surname starts with "a"
+* [ ] List all users whose first name contains the letter "a"
+* [ ] How many emails exist in the DB
+* [ ] How many phone numbers exist in the DB
+* [ ] How many contacts for each user are of legal age
+* [ ] Which user is the oldest among those that exist
+* [ ] Which contact is the youngest among those that exist
+* [ ] Which user the youngest contact belongs to
+* [ ] Which user the oldest contact belongs to
+* [ ] List all contacts with an attribute called `full_name` that is the concatenation of first name, first surname, and second surname
+* [ ] List all contacts that contain an "e", that are of legal age, whose DNI contains a 1, sort them and group them by date of birth
+* [ ] Find all data for contacts under 18 years old as of today
+
+# Updates:
+
+* [ ] Update the date of birth to the current date for all contacts of user 4 whose second surname contains an "a" and whose DNI contains "5"
+
+# Deleting contacts
+
+We are going to insert a user and several contacts and we are going to try the following.
+
+* [ ] Delete the user (what happens)
+* [ ] Delete one contact
+* [ ] Delete all contacts
+* [ ] Delete the user
+* [ ] Use virtual deletion to delete a user (set deleted_at to current date) for a random number of contacts
+
+# Programming
+
+The next step is to develop a program in Java that represents these entity-relationship models and to write a program where we connect to the database and can:
+
+* [ ] Create a new user
+* [ ] Log in with a user
+* [ ] List their contacts
+* [ ] Create contacts
+* [ ] Edit contacts
+* [ ] Delete contacts
+
+To do this, the first thing you have to do is watch the course at [http://www.formacarm.es/portal/servlet/formacarm.servlets.Portal?METHOD=DTEMARIO&id=210](http://www.formacarm.es/portal/servlet/formacarm.servlets.Portal?METHOD=DTEMARIO&id=210)
+
+# Query exercises in a bit more detail
+
+For this we are going to load a new database that is already prepared in the `dump` folder.
+We will run the command
+
 ```shell
 make load-comercial-db
 ```
+
 ```
-1 -  Hallar todos los datos de los clientes mayores de 20 años a fecha de hoy
-2 - Hallar todos los datos de los clientes mayores de 35 años que residan en un distrito de codigo postal 30001
-3 - Hallar el nº de clientes qye residan en cada uno de los distritos (que tengan mismo código postal) En la salida 
-4 - Hallar los diferentes códigos postales donde tenemos tanto clientes como comerciales.
-5 - Hallar la media de los stocks de artículos. (solo con dos decimales)
-6 - Hallar la media del precio unitario de los artículos que se hayan vendido en 2014 (que aparezcan en albaranes de 2014) (solo con dos decimales)
-7 - Hallar el código y descripción de aquellos artículos que están por encima del precio medio de todos los artículos
-8 - Hallar el valor total actual del almacen. (lo que valen todos los artículos que tenemos en stock almacenados).
-9 - Hallar el valor de la facturación total en 2012
-10 - Hallar el valor de la facturación total en cada distrito (codigo_postal de cliente). Incluye en la salida el código postal y la facturación total para ese distrito.
-11 - Hallar (en una solo consulta) el valor de la facturación total por cada año. Incluye el valor total y el año en el resultado de la consulta.
-12 - Hallar (para cada factura) el nº de albaranes que la componen. Incluye el cod_fact y el nº de albaranes en el resultado de la consulta.
-13 - Hallar todos los datos de la factura de mayor importe.
-14 - Hallar los cod_fact e importe de las facturas correspondientes a los tres mayores importes.
-15 - Hallar todos los datos de tres facturas de mayor importe.
-16 - Hallar todos los datos de los artículos cuyo media de ventas para ese articulo
-(media del nº de unidades vendidas en cada albaran para ese artículo) suponga
-40% o más del stock actual para ese artículo.
-17 - Hallar todos los datos de los albaranes correspondientes a los tres mayores 
-importes de albaranes (Ayuda: hay que calcular el importe de cada albaran ya que
-no esta en la tabla) (puedes utilizar una tabla temporal(TEMPORARY) para
-resultados intermedios)
-18 - Hallar, para cada cliente, el dni junto con su facturación total.
-19 - Hallar para cada comercial, el importe total de la facturación originada por los
-clientes que ha visitado alguna vez. Incluye dni de comercial y facturación de sus 
-clientes. (Atención a no sumar repetidas veces importes de facturas. Puedes
-utilizar una tabla temporal TEMPORARY para resultados intermedios)
-20 - Hallar la consulta para averiguar si existe algún artículo que se haya vendido a
-todos los clientes. Si existe indicar código de artículo y descripción. 
-21 - Hallar si existe algún artículo (y si existe, indicar su código y descripción) que se
-haya vendido en todos los distritos (tomando como referencia de distrito el código
-postal del cliente). (Sin TEMPORARY tabla 100% de la nota, con TEMPORARY
-tabla 45% de la nota)
+1 -  Find all data for customers over 20 years old as of today
+2 - Find all data for customers over 35 years old who live in a district with postal code 30001
+3 - Find the number of customers who live in each of the districts (that share the same postal code). In the output
+4 - Find the different postal codes where we have both customers and sales reps.
+5 - Find the average stock of items. (two decimals only)
+6 - Find the average unit price of items that were sold in 2014 (that appear on 2014 delivery notes) (two decimals only)
+7 - Find the code and description of those items that are above the average price of all items
+8 - Find the current total value of the warehouse. (the value of all the items we have in stock)
+9 - Find the total billing value in 2012
+10 - Find the total billing value in each district (customer postal code). Include in the output the postal code and the total billing for that district.
+11 - Find (in a single query) the total billing value for each year. Include the total value and the year in the result of the query.
+12 - Find (for each invoice) the number of delivery notes that make it up. Include the cod_fact and the number of delivery notes in the result of the query.
+13 - Find all data for the invoice with the highest amount.
+14 - Find the cod_fact and amount of the invoices corresponding to the three highest amounts.
+15 - Find all data for the three invoices with the highest amounts.
+16 - Find all data for the items whose average sales for that item
+(average number of units sold in each delivery note for that item) represent
+40% or more of the current stock for that item.
+17 - Find all data for the delivery notes corresponding to the three largest
+delivery note amounts (Hint: you have to calculate the amount of each delivery note since
+it is not in the table) (you can use a TEMPORARY table for
+intermediate results)
+18 - Find, for each customer, the DNI together with their total billing.
+19 - Find, for each sales rep, the total amount of billing generated by the
+customers they have visited at least once. Include the sales rep's DNI and the billing of their
+customers. (Be careful not to add invoice amounts multiple times. You can
+use a TEMPORARY table for intermediate results)
+20 - Find the query to determine whether there is any item that has been sold to
+all customers. If there is, indicate the item code and description.
+21 - Find whether there is any item (and if there is, indicate its code and description) that has been
+sold in all districts (taking the customer's postal code as the district
+reference). (Without a TEMPORARY table 100% of the grade, with a TEMPORARY
+table 45% of the grade)
 ```
 
-# Ejercicios de funciones
-- Sobre el ejercicio de usuario deberas crear una función que te haga la busqueda por `email` o `DNI`del usuario
-- Sobre el ejercicio de usuario deberas crear una función que te haga la busqueda por `Nombre`,`Apellido1` o `Apellido2`
+# Function exercises
 
+* For the user exercise you must create a function that searches for the user by `email` or `DNI`.
+* For the user exercise you must create a function that searches by `FirstName`, `FirstSurname`, or `SecondSurname`.
 
-# Ejercicios de trigger
-- Crea un nuevo campo en el usuario que calcurá el total de contactos que tiene y que serà actualizado siempre que se añada, actualice o elimine un contacto.
-- Crea 1 tabla de historico donde se almacene la información de los "usuarios a actualizar o borrar"
-- Crea 1 tabla de historico donde se almacene la información de los "contactos a actualizar o borrar"
+# Trigger exercises
+
+* Create a new field on the user that will calculate the total number of contacts they have, and that will be updated whenever a contact is added, updated, or deleted.
+* Create one history table where the information of the "users to be updated or deleted" is stored.
+* Create one history table where the information of the "contacts to be updated or deleted" is stored.
